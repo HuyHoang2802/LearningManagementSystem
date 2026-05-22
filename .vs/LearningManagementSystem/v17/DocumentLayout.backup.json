@@ -1,0 +1,458 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Semester07\\PRN222\\LearningManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\learningmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|solutionrelative:learningmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\learningmanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|solutionrelative:learningmanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.models\\migrations\\20260520090512_initschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|solutionrelative:prn232.lms.models\\migrations\\20260520090512_initschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\learningmanagementsystem\\prn232.lms.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|solutionrelative:learningmanagementsystem\\prn232.lms.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\learningmanagementsystem\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|solutionrelative:learningmanagementsystem\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.models\\entities\\lmsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|solutionrelative:prn232.lms.models\\entities\\lmsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\learningmanagementsystem\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|solutionrelative:learningmanagementsystem\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77E07347-487B-4738-A151-DBC0E93174DF}|PRN232.LMS.Services\\PRN232.LMS.Services.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.services\\utility\\studentqueryextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77E07347-487B-4738-A151-DBC0E93174DF}|PRN232.LMS.Services\\PRN232.LMS.Services.csproj|solutionrelative:prn232.lms.services\\utility\\studentqueryextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77E07347-487B-4738-A151-DBC0E93174DF}|PRN232.LMS.Services\\PRN232.LMS.Services.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77E07347-487B-4738-A151-DBC0E93174DF}|PRN232.LMS.Services\\PRN232.LMS.Services.csproj|solutionrelative:prn232.lms.services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77E07347-487B-4738-A151-DBC0E93174DF}|PRN232.LMS.Services\\PRN232.LMS.Services.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.services\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77E07347-487B-4738-A151-DBC0E93174DF}|PRN232.LMS.Services\\PRN232.LMS.Services.csproj|solutionrelative:prn232.lms.services\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.repositories\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|solutionrelative:prn232.lms.repositories\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.repositories\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|solutionrelative:prn232.lms.repositories\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.repositories\\irepositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|solutionrelative:prn232.lms.repositories\\irepositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.repositories\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|solutionrelative:prn232.lms.repositories\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.models\\response\\pagedresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|solutionrelative:prn232.lms.models\\response\\pagedresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.models\\response\\studentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|solutionrelative:prn232.lms.models\\response\\studentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.models\\request\\studentqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|solutionrelative:prn232.lms.models\\request\\studentqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.models\\response\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|solutionrelative:prn232.lms.models\\response\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.repositories\\irepositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|solutionrelative:prn232.lms.repositories\\irepositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.models\\request\\updatestudentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|solutionrelative:prn232.lms.models\\request\\updatestudentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.models\\request\\createstudentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|solutionrelative:prn232.lms.models\\request\\createstudentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.models\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|solutionrelative:prn232.lms.models\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.repositories\\irepositories\\istudentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|solutionrelative:prn232.lms.repositories\\irepositories\\istudentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\learningmanagementsystem\\learningmanagementsystem.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|solutionrelative:learningmanagementsystem\\learningmanagementsystem.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.models\\prn232.lms.models.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|solutionrelative:prn232.lms.models\\prn232.lms.models.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.repositories\\prn232.lms.repositories.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|solutionrelative:prn232.lms.repositories\\prn232.lms.repositories.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20260520090512_InitSchema.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Migrations\\20260520090512_InitSchema.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Models\\Migrations\\20260520090512_InitSchema.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Migrations\\20260520090512_InitSchema.cs",
+              "RelativeToolTip": "PRN232.LMS.Models\\Migrations\\20260520090512_InitSchema.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T09:05:13.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "LearningManagementSystem\\appsettings.json",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\appsettings.json",
+              "RelativeToolTip": "LearningManagementSystem\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-16T06:30:40.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "LearningManagementSystem\\Controllers\\StudentController.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "LearningManagementSystem\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T04:24:19.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "LearningManagementSystem\\Program.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Program.cs",
+              "RelativeToolTip": "LearningManagementSystem\\Program.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAewCQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T06:32:29.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LmsdbContext.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Entities\\LmsdbContext.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Models\\Entities\\LmsdbContext.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Entities\\LmsdbContext.cs",
+              "RelativeToolTip": "PRN232.LMS.Models\\Entities\\LmsdbContext.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAcwB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T06:54:30.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Dockerfile",
+              "RelativeDocumentMoniker": "LearningManagementSystem\\Dockerfile",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Dockerfile",
+              "RelativeToolTip": "LearningManagementSystem\\Dockerfile",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-20T07:44:54.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PRN232.LMS.API.csproj",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\PRN232.LMS.API.csproj",
+              "RelativeDocumentMoniker": "LearningManagementSystem\\PRN232.LMS.API.csproj",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\PRN232.LMS.API.csproj",
+              "RelativeToolTip": "LearningManagementSystem\\PRN232.LMS.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-16T06:32:40.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Services\\StudentService.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Services\\StudentService.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Services\\StudentService.cs",
+              "RelativeToolTip": "PRN232.LMS.Services\\StudentService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwB0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T03:32:20.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StudentQueryExtensions.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Services\\Utility\\StudentQueryExtensions.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Services\\Utility\\StudentQueryExtensions.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Services\\Utility\\StudentQueryExtensions.cs",
+              "RelativeToolTip": "PRN232.LMS.Services\\Utility\\StudentQueryExtensions.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwBQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T06:20:46.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Repositories\\Repositories\\GenericRepository.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "PRN232.LMS.Repositories\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T07:02:12.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IStudentService.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Services\\IStudentService.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Services\\IStudentService.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Services\\IStudentService.cs",
+              "RelativeToolTip": "PRN232.LMS.Services\\IStudentService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T03:26:37.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\Repositories\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Repositories\\Repositories\\StudentRepository.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\Repositories\\StudentRepository.cs",
+              "RelativeToolTip": "PRN232.LMS.Repositories\\Repositories\\StudentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T03:11:00.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\IRepositories\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Repositories\\IRepositories\\IGenericRepository.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\IRepositories\\IGenericRepository.cs",
+              "RelativeToolTip": "PRN232.LMS.Repositories\\IRepositories\\IGenericRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T07:03:59.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Repositories\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "PRN232.LMS.Repositories\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T08:38:25.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PagedResponse.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Response\\PagedResponse.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Models\\Response\\PagedResponse.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Response\\PagedResponse.cs",
+              "RelativeToolTip": "PRN232.LMS.Models\\Response\\PagedResponse.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T03:16:20.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "StudentResponse.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Response\\StudentResponse.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Models\\Response\\StudentResponse.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Response\\StudentResponse.cs",
+              "RelativeToolTip": "PRN232.LMS.Models\\Response\\StudentResponse.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T03:14:58.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "StudentQueryRequest.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Request\\StudentQueryRequest.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Models\\Request\\StudentQueryRequest.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Request\\StudentQueryRequest.cs",
+              "RelativeToolTip": "PRN232.LMS.Models\\Request\\StudentQueryRequest.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T03:14:06.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Response\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Models\\Response\\ApiResponse.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Response\\ApiResponse.cs",
+              "RelativeToolTip": "PRN232.LMS.Models\\Response\\ApiResponse.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T03:15:46.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\IRepositories\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Repositories\\IRepositories\\IUnitOfWork.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\IRepositories\\IUnitOfWork.cs",
+              "RelativeToolTip": "PRN232.LMS.Repositories\\IRepositories\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T07:01:30.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UpdateStudentRequest.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Request\\UpdateStudentRequest.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Models\\Request\\UpdateStudentRequest.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Request\\UpdateStudentRequest.cs",
+              "RelativeToolTip": "PRN232.LMS.Models\\Request\\UpdateStudentRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T04:06:00.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CreateStudentRequest.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Request\\CreateStudentRequest.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Models\\Request\\CreateStudentRequest.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Request\\CreateStudentRequest.cs",
+              "RelativeToolTip": "PRN232.LMS.Models\\Request\\CreateStudentRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T03:13:38.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Entities\\Student.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Models\\Entities\\Student.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Entities\\Student.cs",
+              "RelativeToolTip": "PRN232.LMS.Models\\Entities\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T03:55:01.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IStudentRepository.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\IRepositories\\IStudentRepository.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Repositories\\IRepositories\\IStudentRepository.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\IRepositories\\IStudentRepository.cs",
+              "RelativeToolTip": "PRN232.LMS.Repositories\\IRepositories\\IStudentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T03:09:40.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LearningManagementSystem.http",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\LearningManagementSystem.http",
+              "RelativeDocumentMoniker": "LearningManagementSystem\\LearningManagementSystem.http",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\LearningManagementSystem.http",
+              "RelativeToolTip": "LearningManagementSystem\\LearningManagementSystem.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-05-16T09:19:03.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PRN232.LMS.Models.csproj",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\PRN232.LMS.Models.csproj",
+              "RelativeDocumentMoniker": "PRN232.LMS.Models\\PRN232.LMS.Models.csproj",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\PRN232.LMS.Models.csproj",
+              "RelativeToolTip": "PRN232.LMS.Models\\PRN232.LMS.Models.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-16T06:51:41.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PRN232.LMS.Repositories.csproj",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj",
+              "RelativeDocumentMoniker": "PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj",
+              "RelativeToolTip": "PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-16T06:38:02.724Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
