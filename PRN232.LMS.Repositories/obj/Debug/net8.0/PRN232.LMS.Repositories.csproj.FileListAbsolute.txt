@@ -15,3 +15,4 @@ D:\Semester07\PRN222\LearningManagementSystem\PRN232.LMS.Repositories\obj\Debug\
 D:\Semester07\PRN222\LearningManagementSystem\PRN232.LMS.Repositories\bin\Debug\net8.0\PRN232.LMS.Models.dll
 D:\Semester07\PRN222\LearningManagementSystem\PRN232.LMS.Repositories\bin\Debug\net8.0\PRN232.LMS.Models.pdb
 D:\Semester07\PRN222\LearningManagementSystem\PRN232.LMS.Repositories\obj\Debug\net8.0\PRN232.L.3F3331B9.Up2Date
+D:\Semester07\PRN222\LearningManagementSystem\PRN232.LMS.Repositories\obj\Debug\net8.0\PRN232.LMS.Repositories.sourcelink.json

@@ -15,5 +15,7 @@ namespace PRN232.LMS.Models.Response
         public string Email { get; set; }
 
         public DateOnly? DateOfBirth { get; set; }
+
+        public List<StudentEnrollmentResponse>? Enrollments { get; set; }
     }
 }

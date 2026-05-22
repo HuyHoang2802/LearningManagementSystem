@@ -1,17 +1,10 @@
-﻿using Azure.Core;
 using Microsoft.EntityFrameworkCore;
 using PRN232.LMS.Models.Entities;
 using PRN232.LMS.Models.Request;
 using PRN232.LMS.Models.Response;
 using PRN232.LMS.Repositories.IRepositories;
-using PRN232.LMS.Repositories.Repositories;
 using PRN232.LMS.Services.IServices;
 using PRN232.LMS.Services.Utility;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PRN232.LMS.Services.Services
 {
@@ -24,84 +17,103 @@ namespace PRN232.LMS.Services.Services
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<ApiResponse<List<StudentResponse>>> GetStudentsAsync(StudentQueryRequest query)
+        public async Task<ApiResponse<object>> GetStudentsAsync(StudentQueryRequest query)
         {
             var studentQuery = _unitOfWork.Students.GetQueryable();
             studentQuery = StudentQueryExtensions.Search(studentQuery, query);
-            // Sort
             studentQuery = StudentQueryExtensions.Sort(studentQuery, query);
 
-            // TOTAL ITEMS
             var totalItems = await studentQuery.CountAsync();
 
-            // Pading
+            var expandEnrollments = query.Expand?
+                .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                .Any(x => x.Equals("enrollments", StringComparison.OrdinalIgnoreCase)) == true;
+
+            studentQuery = StudentQueryExtensions.Expand(studentQuery, query);
+
+            var safeSize = query.Size <= 0 ? 10 : query.Size;
+            var safePage = query.Page <= 0 ? 1 : query.Page;
+
             studentQuery = StudentQueryExtensions.Paging(studentQuery, query);
 
             var studentList = await studentQuery.ToListAsync();
 
-
             var students = studentList.Select(s => new StudentResponse
             {
                 StudentId = s.Studentid,
-
                 FullName = s.Fullname,
-
                 Email = s.Email,
                 DateOfBirth = s.Dateofbirth,
-
+                Enrollments = expandEnrollments && s.Enrollments != null
+                    ? s.Enrollments.Select(e => new StudentEnrollmentResponse
+                    {
+                        EnrollmentId = e.Enrollmentid,
+                        EnrollDate = e.Enrolldate ?? DateTime.MinValue,
+                        Status = e.Status ?? string.Empty,
+                        CourseId = e.Courseid,
+                        CourseName = e.Course?.Coursename
+                    }).ToList()
+                    : null
             }).ToList();
 
-
-
-
-
-            return new ApiResponse<List<StudentResponse>>
+            return new ApiResponse<object>
             {
-                success = true,
-                message = "Get students successfully",
+                Success = true,
+                Message = "Get students successfully",
                 Data = students,
-                pagination = new PagedResponse
+                Pagination = new PagedResponse
                 {
-                    Page = query.Page,
-                    PageSize = query.Size,
+                    Page = safePage,
+                    PageSize = safeSize,
                     TotalItems = totalItems,
-                    TotalPages =
-                            (int)Math.Ceiling(
-                                (double)totalItems
-                                / query.Size)
+                    TotalPages = (int)Math.Ceiling((double)totalItems / safeSize)
                 }
             };
         }
-    
 
-
-
-        public async Task<StudentResponse?> GetStudentByIdAsync(int id)
+        public async Task<ApiResponse<object>> GetStudentByIdAsync(int id)
         {
-            var student = await _unitOfWork.Students.GetByIdAsync(id);
+            var studentQuery = _unitOfWork.Students.GetQueryable()
+                .Where(x => x.Studentid == id)
+                .Include(x => x.Enrollments)
+                .ThenInclude(x => x.Course);
+
+            var student = await studentQuery.FirstOrDefaultAsync();
 
             if (student == null)
             {
-               
-                return null;
+                return new ApiResponse<object>
+                {
+                    Success = false,
+                    Message = "Student not found"
+                };
             }
 
-    
-            var toStudentResponse = new StudentResponse
+            var studentResponse = new StudentResponse
             {
                 StudentId = student.Studentid,
                 FullName = student.Fullname,
-                Email = student.Email
+                Email = student.Email,
+                DateOfBirth = student.Dateofbirth,
+                Enrollments = student.Enrollments?.Count > 0
+                    ? student.Enrollments.Select(e => new StudentEnrollmentResponse
+                    {
+                        EnrollmentId = e.Enrollmentid,
+                        EnrollDate = e.Enrolldate ?? DateTime.MinValue,
+                        Status = e.Status ?? string.Empty,
+                        CourseId = e.Courseid,
+                        CourseName = e.Course?.Coursename
+                    }).ToList()
+                    : null
             };
 
-            return toStudentResponse;
+            return new ApiResponse<object>
+            {
+                Success = true,
+                Message = "Get student successfully",
+                Data = studentResponse
+            };
         }
-
-
-
-
-
-
 
         public async Task<ApiResponse<StudentResponse>> CreateStudentAsync(CreateStudentRequest request)
         {
@@ -117,19 +129,17 @@ namespace PRN232.LMS.Services.Services
 
             return new ApiResponse<StudentResponse>
             {
-                success = true,
-
-                message = "Create student successfully",
-
+                Success = true,
+                Message = "Create student successfully",
                 Data = new StudentResponse
                 {
                     StudentId = newStudent.Studentid,
                     FullName = newStudent.Fullname,
                     Email = newStudent.Email
                 }
-            }
-            ;
+            };
         }
+
         public async Task<ApiResponse<StudentResponse>> UpdateStudentAsync(int id, UpdateStudentRequest request)
         {
             var student = await _unitOfWork.Students.GetByIdAsync(id);
@@ -137,24 +147,22 @@ namespace PRN232.LMS.Services.Services
             {
                 return new ApiResponse<StudentResponse>
                 {
-                    success = false,
-                    message = "Student not found"
+                    Success = false,
+                    Message = "Student not found"
                 };
             }
 
-            // Cập nhật thông tin
             student.Email = request.Email;
             student.Fullname = request.FullName;
             student.Dateofbirth = DateOnly.FromDateTime(request.DateOfBirth);
 
-            _unitOfWork.Students.UpdateAsync(student);
+            await _unitOfWork.Students.UpdateAsync(student);
             await _unitOfWork.SaveChangesAsync();
 
             return new ApiResponse<StudentResponse>
             {
-                success = true,
-                message = "Update student successfully",
-                // Map thủ công sang StudentResponse thay vì dùng ToStudentResponse()
+                Success = true,
+                Message = "Update student successfully",
                 Data = new StudentResponse
                 {
                     StudentId = student.Studentid,
@@ -169,24 +177,23 @@ namespace PRN232.LMS.Services.Services
             var student = await _unitOfWork.Students.GetByIdAsync(id);
             if (student != null)
             {
-             
                 await _unitOfWork.Students.DeleteAsync(student.Studentid);
                 await _unitOfWork.SaveChangesAsync();
 
                 return new ApiResponse<bool>
                 {
-                    success = true,
-                    message = "Delete student successfully"
+                    Success = true,
+                    Message = "Delete student successfully",
+                    Data = true
                 };
             }
 
             return new ApiResponse<bool>
             {
-                success = false,
-                message = "Delete student Fails"
+                Success = false,
+                Message = "Delete student failed",
+                Data = false
             };
         }
-
-        
     }
 }

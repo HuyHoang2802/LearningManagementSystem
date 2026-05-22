@@ -15,3 +15,4 @@ D:\Semester07\PRN222\LearningManagementSystem\PRN232.LMS.Services\obj\Debug\net8
 D:\Semester07\PRN222\LearningManagementSystem\PRN232.LMS.Services\obj\Debug\net8.0\refint\PRN232.LMS.Services.dll
 D:\Semester07\PRN222\LearningManagementSystem\PRN232.LMS.Services\obj\Debug\net8.0\PRN232.LMS.Services.pdb
 D:\Semester07\PRN222\LearningManagementSystem\PRN232.LMS.Services\obj\Debug\net8.0\ref\PRN232.LMS.Services.dll
+D:\Semester07\PRN222\LearningManagementSystem\PRN232.LMS.Services\obj\Debug\net8.0\PRN232.LMS.Services.sourcelink.json
