@@ -7,6 +7,7 @@ public class CourseBusinessModel
     public string CourseName { get; set; } = string.Empty;
 
     public int SemesterId { get; set; }
-
+   
     public SemesterBusinessModel? Semester { get; set; }
+    
 }

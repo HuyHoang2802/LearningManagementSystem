@@ -3,11 +3,7 @@ version: "3.9"
 services:
 
   prn232.lms.api:
-    build:
-      context: .
-      dockerfile: ./LearningManagementSystem/Dockerfile
-
-    image: prn232.lms.api:latest
+    image: huyhoang282/prn232.lms.api:latest
 
     container_name: prn232.lms.api
 
@@ -19,6 +15,7 @@ services:
 
     environment:
       ASPNETCORE_ENVIRONMENT: Production
+      Jwt__Secret: a-very-long-and-secure-secret-key-123456789
 
       ConnectionStrings__DBDefault: >
         Host=postgres; Port=5432; Database=LMSDB; Username=postgres; Password=12345; Include Error Detail=true

@@ -37,6 +37,38 @@ namespace PRN232.LMS.Models.Migrations
                     b.ToTable("CourseSubject");
                 });
 
+            modelBuilder.Entity("PRN232.LMS.Models.Entities.AuditLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Action")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("Details")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Path")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("character varying(255)");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AuditLog");
+                });
+
             modelBuilder.Entity("PRN232.LMS.Models.Entities.Course", b =>
                 {
                     b.Property<int>("Courseid")
@@ -114,6 +146,59 @@ namespace PRN232.LMS.Models.Migrations
                     b.ToTable("Grades");
                 });
 
+            modelBuilder.Entity("PRN232.LMS.Models.Entities.Permission", b =>
+                {
+                    b.Property<int>("PermissionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("PermissionId"));
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(255)
+                        .HasColumnType("character varying(255)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.HasKey("PermissionId");
+
+                    b.ToTable("Permission");
+                });
+
+            modelBuilder.Entity("PRN232.LMS.Models.Entities.RefreshToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("Expires")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime?>("Revoked")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RefreshToken");
+                });
+
             modelBuilder.Entity("PRN232.LMS.Models.Entities.Semester", b =>
                 {
                     b.Property<int>("Semesterid")
@@ -185,6 +270,34 @@ namespace PRN232.LMS.Models.Migrations
                     b.ToTable("Subjects");
                 });
 
+            modelBuilder.Entity("PRN232.LMS.Models.Entities.User", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("UserId"));
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("character varying(255)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("User");
+                });
+
             modelBuilder.Entity("CourseSubject", b =>
                 {
                     b.HasOne("PRN232.LMS.Models.Entities.Course", null)
@@ -249,6 +362,17 @@ namespace PRN232.LMS.Models.Migrations
                     b.Navigation("Subject");
                 });
 
+            modelBuilder.Entity("PRN232.LMS.Models.Entities.RefreshToken", b =>
+                {
+                    b.HasOne("PRN232.LMS.Models.Entities.User", "User")
+                        .WithMany("RefreshTokens")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("PRN232.LMS.Models.Entities.Course", b =>
                 {
                     b.Navigation("Enrollments");
@@ -272,6 +396,11 @@ namespace PRN232.LMS.Models.Migrations
             modelBuilder.Entity("PRN232.LMS.Models.Entities.Subject", b =>
                 {
                     b.Navigation("Grades");
+                });
+
+            modelBuilder.Entity("PRN232.LMS.Models.Entities.User", b =>
+                {
+                    b.Navigation("RefreshTokens");
                 });
 #pragma warning restore 612, 618
         }

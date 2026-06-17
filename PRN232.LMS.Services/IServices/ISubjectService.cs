@@ -13,4 +13,6 @@ public interface ISubjectService
     Task<SubjectBusinessModel?> GetSubjectByIdAsync(int id);
 
     Task<SubjectBusinessModel> CreateSubjectAsync(SubjectBusinessModel subject);
+    Task<SubjectBusinessModel?> UpdateSubjectAsync(int id, SubjectBusinessModel subject);
+    Task<bool> DeleteSubjectAsync(int id);
 }

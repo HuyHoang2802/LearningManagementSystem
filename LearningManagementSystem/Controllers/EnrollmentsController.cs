@@ -7,24 +7,17 @@ using PRN232.LMS.Models.Response;
 using PRN232.LMS.Services.BusinessModels;
 using PRN232.LMS.Services.IServices;
 
+using Asp.Versioning;
+
 namespace PRN232.LMS.API.Controllers;
 
+[ApiVersion("1.0")]
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v{version:apiVersion}/enrollments")]
 public class EnrollmentsController : ControllerBase
 {
     private readonly IEnrollmentService _enrollmentService;
-    private static readonly IReadOnlyDictionary<string, Func<EnrollmentResponseModel, object?>> FieldSelectors =
-        new Dictionary<string, Func<EnrollmentResponseModel, object?>>(StringComparer.OrdinalIgnoreCase)
-        {
-            ["enrollmentId"] = enrollment => enrollment.EnrollmentId,
-            ["studentId"] = enrollment => enrollment.StudentId,
-            ["courseId"] = enrollment => enrollment.CourseId,
-            ["enrollDate"] = enrollment => enrollment.EnrollDate,
-            ["status"] = enrollment => enrollment.Status,
-            ["student"] = enrollment => enrollment.Student,
-            ["course"] = enrollment => enrollment.Course
-        };
+
 
     public EnrollmentsController(IEnrollmentService enrollmentService)
     {
@@ -43,7 +36,7 @@ public class EnrollmentsController : ControllerBase
         [FromQuery] string? fields = null)
     {
         var selectedFields = FieldSelectionHelper.ParseFields(fields);
-        var invalidFields = FieldSelectionHelper.GetInvalidFields(selectedFields, FieldSelectors);
+        var invalidFields = FieldSelectionHelper.GetInvalidFields(selectedFields, EnrollmentMappingHelper.FieldSelectors);
         if (invalidFields.Count > 0)
         {
             return BadRequest(new ApiResponse<object>(
@@ -58,11 +51,11 @@ public class EnrollmentsController : ControllerBase
             page,
             size,
             QueryParameterHelper.ParseCommaSeparatedValues(expand));
-        var enrollments = result.Items.Select(MapToResponseModel).ToList();
+        var enrollments = result.Items.Select(EnrollmentMappingHelper.MapToResponseModel).ToList();
         var response = new PagedResponse<object>(
             success: true,
             message: "Enrollments retrieved successfully.",
-            data: FieldSelectionHelper.Apply(enrollments, selectedFields, FieldSelectors),
+            data: FieldSelectionHelper.Apply(enrollments, selectedFields, EnrollmentMappingHelper.FieldSelectors),
             pagination: PaginationHelper.Create(result));
 
         return Ok(response);
@@ -88,7 +81,7 @@ public class EnrollmentsController : ControllerBase
         return Ok(new ApiResponse<EnrollmentResponseModel>(
             success: true,
             message: "Enrollment retrieved successfully.",
-            data: MapToResponseModel(enrollment)));
+            data: EnrollmentMappingHelper.MapToResponseModel(enrollment)));
     }
 
     [HttpPost]
@@ -111,41 +104,54 @@ public class EnrollmentsController : ControllerBase
             new ApiResponse<EnrollmentResponseModel>(
                 success: true,
                 message: "Enrollment created successfully.",
-                data: MapToResponseModel(createdEnrollment)));
+                data: EnrollmentMappingHelper.MapToResponseModel(createdEnrollment)));
     }
 
-    private static EnrollmentResponseModel MapToResponseModel(EnrollmentBusinessModel enrollment)
+    [HttpPut("{id:int}")]
+    [ProducesResponseType(typeof(ApiResponse<EnrollmentResponseModel>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<ApiResponse<EnrollmentResponseModel>>> UpdateEnrollment(
+        int id,
+        [FromBody] EnrollmentRequestModel request)
     {
-        return new EnrollmentResponseModel
+        var updatedEnrollment = await _enrollmentService.UpdateEnrollmentAsync(id, new EnrollmentBusinessModel
         {
-            EnrollmentId = enrollment.EnrollmentId,
-            StudentId = enrollment.StudentId,
-            CourseId = enrollment.CourseId,
-            EnrollDate = enrollment.EnrollDate,
-            Status = enrollment.Status,
-            Student = enrollment.Student is null ? null : MapStudent(enrollment.Student),
-            Course = enrollment.Course is null ? null : MapCourse(enrollment.Course)
-        };
+            StudentId = request.StudentId,
+            CourseId = request.CourseId,
+            EnrollDate = request.EnrollDate,
+            Status = request.Status
+        });
+
+        if (updatedEnrollment == null)
+        {
+            return NotFound(new ApiResponse<object>(
+                success: false,
+                message: $"Enrollment with id {id} was not found."));
+        }
+
+        return Ok(new ApiResponse<EnrollmentResponseModel>(
+            success: true,
+            message: "Enrollment updated successfully.",
+            data: EnrollmentMappingHelper.MapToResponseModel(updatedEnrollment)));
     }
 
-    private static StudentResponseModel MapStudent(StudentBusinessModel student)
+    [HttpDelete("{id:int}")]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<ApiResponse<object>>> DeleteEnrollment(int id)
     {
-        return new StudentResponseModel
-        {
-            StudentId = student.StudentId,
-            FullName = student.FullName,
-            Email = student.Email,
-            DateOfBirth = student.DateOfBirth
-        };
-    }
+        var isDeleted = await _enrollmentService.DeleteEnrollmentAsync(id);
 
-    private static CourseResponseModel MapCourse(CourseBusinessModel course)
-    {
-        return new CourseResponseModel
+        if (!isDeleted)
         {
-            CourseId = course.CourseId,
-            CourseName = course.CourseName,
-            SemesterId = course.SemesterId
-        };
+            return NotFound(new ApiResponse<object>(
+                success: false,
+                message: $"Enrollment with id {id} was not found."));
+        }
+
+        return Ok(new ApiResponse<object>(
+            success: true,
+            message: "Enrollment deleted successfully."));
     }
 }

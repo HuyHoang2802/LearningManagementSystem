@@ -24,7 +24,8 @@ public class EnrollmentService : IEnrollmentService
         string? sort,
         int page,
         int size,
-        List<string> expands)
+        List<string> expands,
+        int? courseId = null)
     {
         var normalizedPage = page <= 0 ? DefaultPage : page;
         var normalizedSize = size <= 0 ? DefaultPageSize : Math.Min(size, MaxPageSize);
@@ -32,6 +33,11 @@ public class EnrollmentService : IEnrollmentService
         var (sortBy, sortDescending) = NormalizeSort(sort);
 
         var query = _unitOfWork.Enrollments.GetQueryable();
+        if (courseId.HasValue)
+        {
+            query = query.Where(enrollment => enrollment.Courseid == courseId.Value);
+        }
+
         if (normalizedExpands.Contains("student"))
         {
             query = query.Include(enrollment => enrollment.Student);
@@ -91,6 +97,33 @@ public class EnrollmentService : IEnrollmentService
         await _unitOfWork.SaveChangesAsync();
 
         return MapToBusinessModel(entity, new HashSet<string>());
+    }
+
+    public async Task<EnrollmentBusinessModel?> UpdateEnrollmentAsync(int id, EnrollmentBusinessModel enrollment)
+    {
+        var entity = await _unitOfWork.Enrollments.GetQueryable().FirstOrDefaultAsync(e => e.Enrollmentid == id);
+        if (entity == null) return null;
+
+        entity.Studentid = enrollment.StudentId;
+        entity.Courseid = enrollment.CourseId;
+        entity.Enrolldate = enrollment.EnrollDate;
+        entity.Status = enrollment.Status;
+
+        await _unitOfWork.Enrollments.UpdateAsync(entity);
+        await _unitOfWork.SaveChangesAsync();
+
+        return MapToBusinessModel(entity, new HashSet<string>());
+    }
+
+    public async Task<bool> DeleteEnrollmentAsync(int id)
+    {
+        var entity = await _unitOfWork.Enrollments.GetQueryable().FirstOrDefaultAsync(e => e.Enrollmentid == id);
+        if (entity == null) return false;
+
+        await _unitOfWork.Enrollments.DeleteAsync(id);
+        await _unitOfWork.SaveChangesAsync();
+
+        return true;
     }
 
     private static IQueryable<Enrollment> ApplySearch(IQueryable<Enrollment> query, string? search)

@@ -83,6 +83,31 @@ public class CourseService : ICourseService
         return MapToBusinessModel(entity, new HashSet<string>());
     }
 
+    public async Task<CourseBusinessModel?> UpdateCourseAsync(int id, CourseBusinessModel course)
+    {
+        var entity = await _unitOfWork.Courses.GetQueryable().FirstOrDefaultAsync(c => c.Courseid == id);
+        if (entity == null) return null;
+
+        entity.Coursename = course.CourseName;
+        entity.Semesterid = course.SemesterId;
+
+        await _unitOfWork.Courses.UpdateAsync(entity);
+        await _unitOfWork.SaveChangesAsync();
+
+        return MapToBusinessModel(entity, new HashSet<string>());
+    }
+
+    public async Task<bool> DeleteCourseAsync(int id)
+    {
+        var entity = await _unitOfWork.Courses.GetQueryable().FirstOrDefaultAsync(c => c.Courseid == id);
+        if (entity == null) return false;
+
+        await _unitOfWork.Courses.DeleteAsync(id);
+        await _unitOfWork.SaveChangesAsync();
+
+        return true;
+    }
+
     private static IQueryable<Course> ApplySearch(IQueryable<Course> query, string? search)
     {
         if (string.IsNullOrWhiteSpace(search))
@@ -145,6 +170,7 @@ public class CourseService : ICourseService
         {
             CourseId = course.Courseid,
             CourseName = course.Coursename,
+           
             SemesterId = course.Semesterid,
             Semester = expands.Contains("semester") && course.Semester is not null
                 ? MapSemester(course.Semester)
@@ -162,4 +188,6 @@ public class CourseService : ICourseService
             EndDate = semester.Enddate.ToDateTime(TimeOnly.MinValue)
         };
     }
+
+    
 }

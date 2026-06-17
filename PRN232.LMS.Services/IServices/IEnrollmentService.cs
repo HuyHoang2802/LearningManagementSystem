@@ -9,9 +9,12 @@ public interface IEnrollmentService
         string? sort,
         int page,
         int size,
-        List<string> expands);
+        List<string> expands,
+        int? courseId = null);
 
     Task<EnrollmentBusinessModel?> GetEnrollmentByIdAsync(int id, List<string> expands);
 
     Task<EnrollmentBusinessModel> CreateEnrollmentAsync(EnrollmentBusinessModel enrollment);
+    Task<EnrollmentBusinessModel?> UpdateEnrollmentAsync(int id, EnrollmentBusinessModel enrollment);
+    Task<bool> DeleteEnrollmentAsync(int id);
 }

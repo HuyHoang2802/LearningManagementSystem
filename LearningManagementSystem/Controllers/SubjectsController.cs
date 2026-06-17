@@ -7,10 +7,13 @@ using PRN232.LMS.Models.Response;
 using PRN232.LMS.Services.BusinessModels;
 using PRN232.LMS.Services.IServices;
 
+using Asp.Versioning;
+
 namespace PRN232.LMS.API.Controllers;
 
+[ApiVersion("1.0")]
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v{version:apiVersion}/subjects")]
 public class SubjectsController : ControllerBase
 {
     private readonly ISubjectService _subjectService;
@@ -98,6 +101,53 @@ public class SubjectsController : ControllerBase
                 success: true,
                 message: "Subject created successfully.",
                 data: MapToResponseModel(createdSubject)));
+    }
+
+    [HttpPut("{id:int}")]
+    [ProducesResponseType(typeof(ApiResponse<SubjectResponseModel>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<ApiResponse<SubjectResponseModel>>> UpdateSubject(
+        int id,
+        [FromBody] SubjectRequestModel request)
+    {
+        var updatedSubject = await _subjectService.UpdateSubjectAsync(id, new SubjectBusinessModel
+        {
+            SubjectCode = request.SubjectCode,
+            SubjectName = request.SubjectName,
+            Credit = request.Credit
+        });
+
+        if (updatedSubject == null)
+        {
+            return NotFound(new ApiResponse<object>(
+                success: false,
+                message: $"Subject with id {id} was not found."));
+        }
+
+        return Ok(new ApiResponse<SubjectResponseModel>(
+            success: true,
+            message: "Subject updated successfully.",
+            data: MapToResponseModel(updatedSubject)));
+    }
+
+    [HttpDelete("{id:int}")]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<ApiResponse<object>>> DeleteSubject(int id)
+    {
+        var isDeleted = await _subjectService.DeleteSubjectAsync(id);
+
+        if (!isDeleted)
+        {
+            return NotFound(new ApiResponse<object>(
+                success: false,
+                message: $"Subject with id {id} was not found."));
+        }
+
+        return Ok(new ApiResponse<object>(
+            success: true,
+            message: "Subject deleted successfully."));
     }
 
     private static SubjectResponseModel MapToResponseModel(SubjectBusinessModel subject)

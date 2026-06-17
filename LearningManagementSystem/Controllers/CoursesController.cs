@@ -7,13 +7,17 @@ using PRN232.LMS.Models.Response;
 using PRN232.LMS.Services.BusinessModels;
 using PRN232.LMS.Services.IServices;
 
+using Asp.Versioning;
+
 namespace PRN232.LMS.API.Controllers;
 
+[ApiVersion("1.0")]
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v{version:apiVersion}/courses")]
 public class CoursesController : ControllerBase
 {
     private readonly ICourseService _courseService;
+    private readonly IEnrollmentService _enrollmentService;
     private static readonly IReadOnlyDictionary<string, Func<CourseResponseModel, object?>> FieldSelectors =
         new Dictionary<string, Func<CourseResponseModel, object?>>(StringComparer.OrdinalIgnoreCase)
         {
@@ -23,9 +27,11 @@ public class CoursesController : ControllerBase
             ["semester"] = course => course.Semester
         };
 
-    public CoursesController(ICourseService courseService)
+    public CoursesController(ICourseService courseService, IEnrollmentService enrollmentService)
     {
         _courseService = courseService;
+        _enrollmentService = enrollmentService;
+
     }
 
     [HttpGet]
@@ -37,7 +43,8 @@ public class CoursesController : ControllerBase
         [FromQuery] int page = 1,
         [FromQuery(Name = "size")] int size = 10,
         [FromQuery] string? fields = null,
-        [FromQuery] string? expand = null)
+        [FromQuery] string? expand = null,
+        [FromHeader(Name = "X-Request-Id")] string? requestId = null)
     {
         var selectedFields = FieldSelectionHelper.ParseFields(fields);
         var invalidFields = FieldSelectionHelper.GetInvalidFields(selectedFields, FieldSelectors);
@@ -105,6 +112,52 @@ public class CoursesController : ControllerBase
                 data: MapToResponseModel(createdCourse)));
     }
 
+    [HttpPut("{id:int}")]
+    [ProducesResponseType(typeof(ApiResponse<CourseResponseModel>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<ApiResponse<CourseResponseModel>>> UpdateCourse(
+        int id,
+        [FromBody] CourseRequestModel request)
+    {
+        var updatedCourse = await _courseService.UpdateCourseAsync(id, new CourseBusinessModel
+        {
+            CourseName = request.CourseName,
+            SemesterId = request.SemesterId
+        });
+
+        if (updatedCourse == null)
+        {
+            return NotFound(new ApiResponse<object>(
+                success: false,
+                message: $"Course with id {id} was not found."));
+        }
+
+        return Ok(new ApiResponse<CourseResponseModel>(
+            success: true,
+            message: "Course updated successfully.",
+            data: MapToResponseModel(updatedCourse)));
+    }
+
+    [HttpDelete("{id:int}")]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<ApiResponse<object>>> DeleteCourse(int id)
+    {
+        var isDeleted = await _courseService.DeleteCourseAsync(id);
+
+        if (!isDeleted)
+        {
+            return NotFound(new ApiResponse<object>(
+                success: false,
+                message: $"Course with id {id} was not found."));
+        }
+
+        return Ok(new ApiResponse<object>(
+            success: true,
+            message: "Course deleted successfully."));
+    }
+
     private static CourseResponseModel MapToResponseModel(CourseBusinessModel course)
     {
         return new CourseResponseModel
@@ -125,5 +178,43 @@ public class CoursesController : ControllerBase
             StartDate = semester.StartDate,
             EndDate = semester.EndDate
         };
+    }
+    [HttpGet("{id:int}/enrollments")]
+    [ProducesResponseType(typeof(PagedResponse<object>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<PagedResponse<object>>> GetCourseEnrollments(
+     int id,
+     [FromQuery] string? search,
+     [FromQuery] string? sort,
+     [FromQuery] int page = 1,
+     [FromQuery(Name = "size")] int size = 10,
+     [FromQuery] string? fields = null,
+     [FromQuery] string? expand = null)
+    {
+        var selectedFields = FieldSelectionHelper.ParseFields(fields);
+       
+        var invalidFields = FieldSelectionHelper.GetInvalidFields(selectedFields, EnrollmentMappingHelper.FieldSelectors);
+
+        if (invalidFields.Count > 0)
+        {
+            return BadRequest(new ApiResponse<object>(
+                success: false,
+                message: "One or more requested fields are invalid.",
+                errors: new { fields = invalidFields }));
+        }
+
+        var expands = QueryParameterHelper.ParseCommaSeparatedValues(expand);
+        var result = await _enrollmentService.GetEnrollmentsAsync(search, sort, page, size, expands, courseId: id);
+
+        var enrollments = result.Items.Select(EnrollmentMappingHelper.MapToResponseModel).ToList();
+
+        var response = new PagedResponse<object>(
+            success: true,
+            message: "Course enrollments retrieved successfully.",
+          
+            data: FieldSelectionHelper.Apply(enrollments, selectedFields, EnrollmentMappingHelper.FieldSelectors),
+            pagination: PaginationHelper.Create(result));
+
+        return Ok(response);
     }
 }

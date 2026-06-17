@@ -69,6 +69,32 @@ public class SubjectService : ISubjectService
         return MapToBusinessModel(entity);
     }
 
+    public async Task<SubjectBusinessModel?> UpdateSubjectAsync(int id, SubjectBusinessModel subject)
+    {
+        var entity = await _unitOfWork.Subjects.GetQueryable().FirstOrDefaultAsync(s => s.Subjectid == id);
+        if (entity == null) return null;
+
+        entity.Subjectcode = subject.SubjectCode;
+        entity.Subjectname = subject.SubjectName;
+        entity.Credit = subject.Credit;
+
+        await _unitOfWork.Subjects.UpdateAsync(entity);
+        await _unitOfWork.SaveChangesAsync();
+
+        return MapToBusinessModel(entity);
+    }
+
+    public async Task<bool> DeleteSubjectAsync(int id)
+    {
+        var entity = await _unitOfWork.Subjects.GetQueryable().FirstOrDefaultAsync(s => s.Subjectid == id);
+        if (entity == null) return false;
+
+        await _unitOfWork.Subjects.DeleteAsync(id);
+        await _unitOfWork.SaveChangesAsync();
+
+        return true;
+    }
+
     private static IQueryable<Subject> ApplySearch(IQueryable<Subject> query, string? search)
     {
         if (string.IsNullOrWhiteSpace(search))

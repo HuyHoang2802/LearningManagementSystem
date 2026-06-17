@@ -9,4 +9,5 @@ public class CourseRequestModel
     public string CourseName { get; set; } = string.Empty;
 
     public int SemesterId { get; set; }
+    public int EnrollmentId { get; set; }
 }

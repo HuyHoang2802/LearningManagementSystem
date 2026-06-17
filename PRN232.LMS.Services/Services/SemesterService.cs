@@ -69,6 +69,32 @@ public class SemesterService : ISemesterService
         return MapToBusinessModel(entity);
     }
 
+    public async Task<SemesterBusinessModel?> UpdateSemesterAsync(int id, SemesterBusinessModel semester)
+    {
+        var entity = await _unitOfWork.Semesters.GetQueryable().FirstOrDefaultAsync(s => s.Semesterid == id);
+        if (entity == null) return null;
+
+        entity.Semestername = semester.SemesterName;
+        entity.Startdate = DateOnly.FromDateTime(semester.StartDate);
+        entity.Enddate = DateOnly.FromDateTime(semester.EndDate);
+
+        await _unitOfWork.Semesters.UpdateAsync(entity);
+        await _unitOfWork.SaveChangesAsync();
+
+        return MapToBusinessModel(entity);
+    }
+
+    public async Task<bool> DeleteSemesterAsync(int id)
+    {
+        var entity = await _unitOfWork.Semesters.GetQueryable().FirstOrDefaultAsync(s => s.Semesterid == id);
+        if (entity == null) return false;
+
+        await _unitOfWork.Semesters.DeleteAsync(id);
+        await _unitOfWork.SaveChangesAsync();
+
+        return true;
+    }
+
     private static IQueryable<Semester> ApplySearch(IQueryable<Semester> query, string? search)
     {
         if (string.IsNullOrWhiteSpace(search))

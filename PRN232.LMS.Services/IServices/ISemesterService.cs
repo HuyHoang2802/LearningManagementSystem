@@ -13,4 +13,6 @@ public interface ISemesterService
     Task<SemesterBusinessModel?> GetSemesterByIdAsync(int id);
 
     Task<SemesterBusinessModel> CreateSemesterAsync(SemesterBusinessModel semester);
+    Task<SemesterBusinessModel?> UpdateSemesterAsync(int id, SemesterBusinessModel semester);
+    Task<bool> DeleteSemesterAsync(int id);
 }

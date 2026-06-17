@@ -13,5 +13,8 @@ public interface ICourseService
 
     Task<CourseBusinessModel?> GetCourseByIdAsync(int id, List<string> expands);
 
+    Task<CourseBusinessModel?> UpdateCourseAsync(int id, CourseBusinessModel course);
+    Task<bool> DeleteCourseAsync(int id);
+     
     Task<CourseBusinessModel> CreateCourseAsync(CourseBusinessModel course);
 }

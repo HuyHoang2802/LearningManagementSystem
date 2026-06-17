@@ -7,10 +7,13 @@ using PRN232.LMS.Models.Response;
 using PRN232.LMS.Services.BusinessModels;
 using PRN232.LMS.Services.IServices;
 
+using Asp.Versioning;
+
 namespace PRN232.LMS.API.Controllers;
 
+[ApiVersion("1.0")]
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v{version:apiVersion}/semesters")]
 public class SemestersController : ControllerBase
 {
     private readonly ISemesterService _semesterService;
@@ -98,6 +101,53 @@ public class SemestersController : ControllerBase
                 success: true,
                 message: "Semester created successfully.",
                 data: MapToResponseModel(createdSemester)));
+    }
+
+    [HttpPut("{id:int}")]
+    [ProducesResponseType(typeof(ApiResponse<SemesterResponseModel>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<ApiResponse<SemesterResponseModel>>> UpdateSemester(
+        int id,
+        [FromBody] SemesterRequestModel request)
+    {
+        var updatedSemester = await _semesterService.UpdateSemesterAsync(id, new SemesterBusinessModel
+        {
+            SemesterName = request.SemesterName,
+            StartDate = request.StartDate,
+            EndDate = request.EndDate
+        });
+
+        if (updatedSemester == null)
+        {
+            return NotFound(new ApiResponse<object>(
+                success: false,
+                message: $"Semester with id {id} was not found."));
+        }
+
+        return Ok(new ApiResponse<SemesterResponseModel>(
+            success: true,
+            message: "Semester updated successfully.",
+            data: MapToResponseModel(updatedSemester)));
+    }
+
+    [HttpDelete("{id:int}")]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<ApiResponse<object>>> DeleteSemester(int id)
+    {
+        var isDeleted = await _semesterService.DeleteSemesterAsync(id);
+
+        if (!isDeleted)
+        {
+            return NotFound(new ApiResponse<object>(
+                success: false,
+                message: $"Semester with id {id} was not found."));
+        }
+
+        return Ok(new ApiResponse<object>(
+            success: true,
+            message: "Semester deleted successfully."));
     }
 
     private static SemesterResponseModel MapToResponseModel(SemesterBusinessModel semester)
