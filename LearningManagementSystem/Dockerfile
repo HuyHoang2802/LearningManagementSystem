@@ -13,7 +13,6 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["LearningManagementSystem/PRN232.LMS.API.csproj", "LearningManagementSystem/"]
-COPY ["PRN232.LMS.Models/PRN232.LMS.Models.csproj", "PRN232.LMS.Models/"]
 COPY ["PRN232.LMS.Services/PRN232.LMS.Services.csproj", "PRN232.LMS.Services/"]
 COPY ["PRN232.LMS.Repositories/PRN232.LMS.Repositories.csproj", "PRN232.LMS.Repositories/"]
 RUN dotnet restore "./LearningManagementSystem/PRN232.LMS.API.csproj"

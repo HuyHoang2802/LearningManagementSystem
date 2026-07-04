@@ -1,7 +1,7 @@
 using System.Net;
 using System.Text.Json;
 
-namespace PRN232.LMS.API.Middlewares
+namespace PRN232.LMS.API.Middleware
 {
     public class GlobalExceptionMiddleware
     {
@@ -35,8 +35,8 @@ namespace PRN232.LMS.API.Middlewares
             var response = new
             {
                 success = false,
-                message = "Internal server error",
-                errors = (object?)null
+                message = exception.Message,
+                errors = exception.InnerException?.Message ?? exception.StackTrace
             };
 
             var json = JsonSerializer.Serialize(response);

@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
-using PRN232.LMS.API.Middlewares;
+using PRN232.LMS.API.Middleware;
 using PRN232.LMS.Models.Validation;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -25,7 +25,7 @@ namespace LearningManagementSystem
             // Add services to the container.
             builder.Services.AddControllers(options =>
             {
-                options.ReturnHttpNotAcceptable = true;
+                options.ReturnHttpNotAcceptable = false;
             }).AddXmlDataContractSerializerFormatters();
             
             builder.Services.AddFluentValidationAutoValidation();
@@ -36,6 +36,10 @@ namespace LearningManagementSystem
                 options.DefaultApiVersion = new Asp.Versioning.ApiVersion(1, 0);
                 options.AssumeDefaultVersionWhenUnspecified = true;
                 options.ReportApiVersions = true;
+                options.ApiVersionReader = Asp.Versioning.ApiVersionReader.Combine(
+                    new Asp.Versioning.UrlSegmentApiVersionReader(),
+                    new Asp.Versioning.HeaderApiVersionReader("x-api-version"),
+                    new Asp.Versioning.MediaTypeApiVersionReader("x-api-version"));
             }).AddMvc().AddApiExplorer(options =>
             {
                 options.GroupNameFormat = "'v'VVV";
@@ -50,13 +54,12 @@ namespace LearningManagementSystem
 
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
-                    Description = @"JWT Authorization header using the Bearer scheme. \r\n\r\n 
-                      Enter 'Bearer' [space] and then your token in the text input below.
-                      \r\n\r\nExample: 'Bearer 12345abcdef'",
+                    Description = @"JWT Authorization header. Chỉ cần dán chuỗi Token của bạn vào ô bên dưới (không cần gõ thêm chữ Bearer).",
                     Name = "Authorization",
                     In = ParameterLocation.Header,
-                    Type = SecuritySchemeType.ApiKey,
-                    Scheme = "Bearer"
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    BearerFormat = "JWT"
                 });
 
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement()

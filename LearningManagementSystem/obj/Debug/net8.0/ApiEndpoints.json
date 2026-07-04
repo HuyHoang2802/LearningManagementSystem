@@ -2,6 +2,94 @@
   {
     "ContainingType": "PRN232.LMS.API.Controllers.AuthController",
     "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PRN232.LMS.Models.Request.LoginRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "x-api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.LoginResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.LoginResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
+        ],
+        "StatusCode": 401
+      }
+    ]
+  },
+  {
+    "ContainingType": "PRN232.LMS.API.Controllers.AuthController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/auth/refresh-token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PRN232.LMS.Models.Request.RefreshTokenRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "x-api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.LoginResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.LoginResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
+        ],
+        "StatusCode": 401
+      }
+    ]
+  },
+  {
+    "ContainingType": "PRN232.LMS.API.Controllers.AuthController",
+    "Method": "Login",
     "RelativePath": "api/v1/auth/login",
     "HttpMethod": "POST",
     "IsController": true,
@@ -15,24 +103,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.LoginResponse, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.LoginResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.LoginResponse, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.LoginResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 401
       }
@@ -54,24 +142,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.LoginResponse, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.LoginResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.LoginResponse, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.LoginResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 401
       }
@@ -125,22 +213,22 @@
       {
         "Type": "PRN232.LMS.API.Wrappers.PagedResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 400
       }
@@ -162,24 +250,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.CourseResponseModel, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.CourseResponseModel, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 201
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 400
       }
@@ -206,24 +294,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.CourseResponseModel, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.CourseResponseModel, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -250,35 +338,35 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.CourseResponseModel, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.CourseResponseModel, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 400
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -302,22 +390,22 @@
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -371,22 +459,22 @@
       {
         "Type": "PRN232.LMS.API.Wrappers.PagedResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 400
       }
@@ -435,22 +523,22 @@
       {
         "Type": "PRN232.LMS.API.Wrappers.PagedResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 400
       }
@@ -472,24 +560,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.EnrollmentResponseModel, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.EnrollmentResponseModel, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 201
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 400
       }
@@ -516,24 +604,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.EnrollmentResponseModel, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.EnrollmentResponseModel, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -560,35 +648,35 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.EnrollmentResponseModel, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.EnrollmentResponseModel, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 400
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -612,22 +700,22 @@
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -671,22 +759,22 @@
       {
         "Type": "PRN232.LMS.API.Wrappers.PagedResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 400
       }
@@ -708,24 +796,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.SemesterResponseModel, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.SemesterResponseModel, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 201
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 400
       }
@@ -747,24 +835,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.SemesterResponseModel, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.SemesterResponseModel, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -791,35 +879,35 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.SemesterResponseModel, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.SemesterResponseModel, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 400
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -843,22 +931,22 @@
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -907,11 +995,11 @@
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       }
@@ -933,24 +1021,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 201
       },
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 400
       }
@@ -972,24 +1060,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -1017,24 +1105,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -1058,22 +1146,22 @@
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -1117,22 +1205,22 @@
       {
         "Type": "PRN232.LMS.API.Wrappers.PagedResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 400
       }
@@ -1154,24 +1242,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.SubjectResponseModel, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.SubjectResponseModel, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 201
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 400
       }
@@ -1193,24 +1281,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.SubjectResponseModel, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.SubjectResponseModel, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -1237,35 +1325,35 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.SubjectResponseModel, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.API.ResponseModels.SubjectResponseModel, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 400
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -1289,22 +1377,22 @@
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=1.0",
+          "application/json; x-api-version=1.0",
+          "text/json; x-api-version=1.0",
+          "application/xml; x-api-version=1.0",
+          "text/xml; x-api-version=1.0"
         ],
         "StatusCode": 404
       }
@@ -1353,11 +1441,11 @@
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=2.0",
+          "application/json; x-api-version=2.0",
+          "text/json; x-api-version=2.0",
+          "application/xml; x-api-version=2.0",
+          "text/xml; x-api-version=2.0"
         ],
         "StatusCode": 200
       }
@@ -1379,24 +1467,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=2.0",
+          "application/json; x-api-version=2.0",
+          "text/json; x-api-version=2.0",
+          "application/xml; x-api-version=2.0",
+          "text/xml; x-api-version=2.0"
         ],
         "StatusCode": 201
       },
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=2.0",
+          "application/json; x-api-version=2.0",
+          "text/json; x-api-version=2.0",
+          "application/xml; x-api-version=2.0",
+          "text/xml; x-api-version=2.0"
         ],
         "StatusCode": 400
       }
@@ -1418,24 +1506,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=2.0",
+          "application/json; x-api-version=2.0",
+          "text/json; x-api-version=2.0",
+          "application/xml; x-api-version=2.0",
+          "text/xml; x-api-version=2.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=2.0",
+          "application/json; x-api-version=2.0",
+          "text/json; x-api-version=2.0",
+          "application/xml; x-api-version=2.0",
+          "text/xml; x-api-version=2.0"
         ],
         "StatusCode": 404
       }
@@ -1463,24 +1551,24 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=2.0",
+          "application/json; x-api-version=2.0",
+          "text/json; x-api-version=2.0",
+          "application/xml; x-api-version=2.0",
+          "text/xml; x-api-version=2.0"
         ],
         "StatusCode": 200
       },
       {
-        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[PRN232.LMS.Models.Response.StudentResponse, PRN232.LMS.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=2.0",
+          "application/json; x-api-version=2.0",
+          "text/json; x-api-version=2.0",
+          "application/xml; x-api-version=2.0",
+          "text/xml; x-api-version=2.0"
         ],
         "StatusCode": 404
       }
@@ -1504,22 +1592,22 @@
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=2.0",
+          "application/json; x-api-version=2.0",
+          "text/json; x-api-version=2.0",
+          "application/xml; x-api-version=2.0",
+          "text/xml; x-api-version=2.0"
         ],
         "StatusCode": 200
       },
       {
         "Type": "PRN232.LMS.Models.Response.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "text/plain; x-api-version=2.0",
+          "application/json; x-api-version=2.0",
+          "text/json; x-api-version=2.0",
+          "application/xml; x-api-version=2.0",
+          "text/xml; x-api-version=2.0"
         ],
         "StatusCode": 404
       }

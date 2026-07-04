@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using PRN232.LMS.API.Helpers;
 using PRN232.LMS.API.RequestModels;
 using PRN232.LMS.API.ResponseModels;
@@ -32,6 +33,7 @@ public class SemestersController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize]
     [ProducesResponseType(typeof(PagedResponse<object>), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<PagedResponse<object>>> GetSemesters(

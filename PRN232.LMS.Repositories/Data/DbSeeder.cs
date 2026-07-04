@@ -1,3 +1,4 @@
+using BCrypt.Net;
 using PRN232.LMS.Models.Entities;
 
 namespace PRN232.LMS.Repositories.Data
@@ -6,6 +7,18 @@ namespace PRN232.LMS.Repositories.Data
     {
         public static void Seed(LmsdbContext context)
         {
+            // USERS - Admin user
+            if (!context.Users.Any())
+            {
+                context.Users.Add(new User
+                {
+                    Username = "admin",
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("123456"),
+                    Role = "Admin"
+                });
+                context.SaveChanges();
+            }
+
             // SUBJECTS - 10 subjects
             if (!context.Subjects.Any())
             {
@@ -32,6 +45,7 @@ namespace PRN232.LMS.Repositories.Data
                 {
                     students.Add(new Student
                     {
+                        StudentCode = $"SE{180000 + i}",
                         Fullname = $"Student {i:D2}",
                         Email = $"student{i}@fpt.edu.vn",
                         Dateofbirth = new DateOnly(2002 + (i % 4), (i % 12) + 1, (i % 28) + 1)

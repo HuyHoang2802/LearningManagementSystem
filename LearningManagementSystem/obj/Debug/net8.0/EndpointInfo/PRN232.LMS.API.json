@@ -12,32 +12,32 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/LoginRequest"
               }
             },
-            "text/json": {
+            "text/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/LoginRequest"
               }
             },
-            "application/*+json": {
+            "application/*+json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/LoginRequest"
               }
             },
-            "application/xml": {
+            "application/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/LoginRequest"
               }
             },
-            "text/xml": {
+            "text/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/LoginRequest"
               }
             },
-            "application/*+xml": {
+            "application/*+xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/LoginRequest"
               }
@@ -48,27 +48,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
@@ -78,27 +78,139 @@
           "401": {
             "description": "Unauthorized",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; x-api-version=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "text/json; x-api-version=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/*+json; x-api-version=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/xml; x-api-version=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "text/xml; x-api-version=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/*+xml; x-api-version=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "application/xml; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "text/xml; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "application/xml; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
@@ -115,32 +227,32 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/RefreshTokenRequest"
               }
             },
-            "text/json": {
+            "text/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/RefreshTokenRequest"
               }
             },
-            "application/*+json": {
+            "application/*+json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/RefreshTokenRequest"
               }
             },
-            "application/xml": {
+            "application/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/RefreshTokenRequest"
               }
             },
-            "text/xml": {
+            "text/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/RefreshTokenRequest"
               }
             },
-            "application/*+xml": {
+            "application/*+xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/RefreshTokenRequest"
               }
@@ -151,27 +263,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
@@ -181,27 +293,139 @@
           "401": {
             "description": "Unauthorized",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/refresh-token": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; x-api-version=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            },
+            "text/json; x-api-version=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            },
+            "application/*+json; x-api-version=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            },
+            "application/xml; x-api-version=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            },
+            "text/xml; x-api-version=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            },
+            "application/*+xml; x-api-version=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "application/xml; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "text/xml; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "application/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "text/json; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "application/xml; x-api-version=1.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponseApiResponse"
+                }
+              },
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/LoginResponseApiResponse"
                 }
@@ -275,27 +499,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
@@ -305,27 +529,27 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -340,32 +564,32 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CourseRequestModel"
               }
             },
-            "text/json": {
+            "text/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CourseRequestModel"
               }
             },
-            "application/*+json": {
+            "application/*+json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CourseRequestModel"
               }
             },
-            "application/xml": {
+            "application/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CourseRequestModel"
               }
             },
-            "text/xml": {
+            "text/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CourseRequestModel"
               }
             },
-            "application/*+xml": {
+            "application/*+xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CourseRequestModel"
               }
@@ -376,27 +600,27 @@
           "201": {
             "description": "Created",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
@@ -406,27 +630,27 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -463,27 +687,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
@@ -493,27 +717,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -539,32 +763,32 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CourseRequestModel"
               }
             },
-            "text/json": {
+            "text/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CourseRequestModel"
               }
             },
-            "application/*+json": {
+            "application/*+json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CourseRequestModel"
               }
             },
-            "application/xml": {
+            "application/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CourseRequestModel"
               }
             },
-            "text/xml": {
+            "text/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CourseRequestModel"
               }
             },
-            "application/*+xml": {
+            "application/*+xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CourseRequestModel"
               }
@@ -575,27 +799,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/CourseResponseModelApiResponse"
                 }
@@ -605,27 +829,27 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -635,27 +859,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -683,27 +907,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -713,27 +937,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -809,27 +1033,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
@@ -839,27 +1063,27 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -926,27 +1150,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
@@ -956,27 +1180,27 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -991,32 +1215,32 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/EnrollmentRequestModel"
               }
             },
-            "text/json": {
+            "text/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/EnrollmentRequestModel"
               }
             },
-            "application/*+json": {
+            "application/*+json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/EnrollmentRequestModel"
               }
             },
-            "application/xml": {
+            "application/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/EnrollmentRequestModel"
               }
             },
-            "text/xml": {
+            "text/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/EnrollmentRequestModel"
               }
             },
-            "application/*+xml": {
+            "application/*+xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/EnrollmentRequestModel"
               }
@@ -1027,27 +1251,27 @@
           "201": {
             "description": "Created",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
@@ -1057,27 +1281,27 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -1114,27 +1338,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
@@ -1144,27 +1368,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -1190,32 +1414,32 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/EnrollmentRequestModel"
               }
             },
-            "text/json": {
+            "text/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/EnrollmentRequestModel"
               }
             },
-            "application/*+json": {
+            "application/*+json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/EnrollmentRequestModel"
               }
             },
-            "application/xml": {
+            "application/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/EnrollmentRequestModel"
               }
             },
-            "text/xml": {
+            "text/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/EnrollmentRequestModel"
               }
             },
-            "application/*+xml": {
+            "application/*+xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/EnrollmentRequestModel"
               }
@@ -1226,27 +1450,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/EnrollmentResponseModelApiResponse"
                 }
@@ -1256,27 +1480,27 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -1286,27 +1510,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -1334,27 +1558,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -1364,27 +1588,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -1444,27 +1668,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
@@ -1474,27 +1698,27 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -1509,32 +1733,32 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SemesterRequestModel"
               }
             },
-            "text/json": {
+            "text/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SemesterRequestModel"
               }
             },
-            "application/*+json": {
+            "application/*+json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SemesterRequestModel"
               }
             },
-            "application/xml": {
+            "application/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SemesterRequestModel"
               }
             },
-            "text/xml": {
+            "text/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SemesterRequestModel"
               }
             },
-            "application/*+xml": {
+            "application/*+xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SemesterRequestModel"
               }
@@ -1545,27 +1769,27 @@
           "201": {
             "description": "Created",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
@@ -1575,27 +1799,27 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -1625,27 +1849,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
@@ -1655,27 +1879,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -1701,32 +1925,32 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SemesterRequestModel"
               }
             },
-            "text/json": {
+            "text/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SemesterRequestModel"
               }
             },
-            "application/*+json": {
+            "application/*+json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SemesterRequestModel"
               }
             },
-            "application/xml": {
+            "application/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SemesterRequestModel"
               }
             },
-            "text/xml": {
+            "text/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SemesterRequestModel"
               }
             },
-            "application/*+xml": {
+            "application/*+xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SemesterRequestModel"
               }
@@ -1737,27 +1961,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SemesterResponseModelApiResponse"
                 }
@@ -1767,27 +1991,27 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -1797,27 +2021,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -1845,27 +2069,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -1875,27 +2099,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -1960,27 +2184,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -1995,32 +2219,32 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CreateStudentRequest"
               }
             },
-            "text/json": {
+            "text/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CreateStudentRequest"
               }
             },
-            "application/*+json": {
+            "application/*+json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CreateStudentRequest"
               }
             },
-            "application/xml": {
+            "application/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CreateStudentRequest"
               }
             },
-            "text/xml": {
+            "text/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CreateStudentRequest"
               }
             },
-            "application/*+xml": {
+            "application/*+xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/CreateStudentRequest"
               }
@@ -2031,27 +2255,27 @@
           "201": {
             "description": "Created",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
@@ -2061,27 +2285,27 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
@@ -2112,27 +2336,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
@@ -2142,27 +2366,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -2188,32 +2412,32 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateStudentRequest"
               }
             },
-            "text/json": {
+            "text/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateStudentRequest"
               }
             },
-            "application/*+json": {
+            "application/*+json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateStudentRequest"
               }
             },
-            "application/xml": {
+            "application/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateStudentRequest"
               }
             },
-            "text/xml": {
+            "text/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateStudentRequest"
               }
             },
-            "application/*+xml": {
+            "application/*+xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateStudentRequest"
               }
@@ -2224,27 +2448,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
@@ -2254,27 +2478,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/StudentResponseApiResponse"
                 }
@@ -2302,27 +2526,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/BooleanApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/BooleanApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/BooleanApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/BooleanApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/BooleanApiResponse"
                 }
@@ -2332,27 +2556,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/BooleanApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/BooleanApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/BooleanApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/BooleanApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/BooleanApiResponse"
                 }
@@ -2412,27 +2636,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
@@ -2442,27 +2666,27 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -2477,32 +2701,32 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SubjectRequestModel"
               }
             },
-            "text/json": {
+            "text/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SubjectRequestModel"
               }
             },
-            "application/*+json": {
+            "application/*+json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SubjectRequestModel"
               }
             },
-            "application/xml": {
+            "application/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SubjectRequestModel"
               }
             },
-            "text/xml": {
+            "text/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SubjectRequestModel"
               }
             },
-            "application/*+xml": {
+            "application/*+xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SubjectRequestModel"
               }
@@ -2513,27 +2737,27 @@
           "201": {
             "description": "Created",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
@@ -2543,27 +2767,27 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -2593,27 +2817,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
@@ -2623,27 +2847,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -2669,32 +2893,32 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SubjectRequestModel"
               }
             },
-            "text/json": {
+            "text/json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SubjectRequestModel"
               }
             },
-            "application/*+json": {
+            "application/*+json; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SubjectRequestModel"
               }
             },
-            "application/xml": {
+            "application/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SubjectRequestModel"
               }
             },
-            "text/xml": {
+            "text/xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SubjectRequestModel"
               }
             },
-            "application/*+xml": {
+            "application/*+xml; x-api-version=1.0": {
               "schema": {
                 "$ref": "#/components/schemas/SubjectRequestModel"
               }
@@ -2705,27 +2929,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/SubjectResponseModelApiResponse"
                 }
@@ -2735,27 +2959,27 @@
           "400": {
             "description": "Bad Request",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -2765,27 +2989,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -2813,27 +3037,27 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
@@ -2843,27 +3067,27 @@
           "404": {
             "description": "Not Found",
             "content": {
-              "text/plain": {
+              "text/plain; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/json": {
+              "application/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/json": {
+              "text/json; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "application/xml": {
+              "application/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }
               },
-              "text/xml": {
+              "text/xml; x-api-version=1.0": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectApiResponse"
                 }

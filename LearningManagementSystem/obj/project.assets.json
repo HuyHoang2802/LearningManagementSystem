@@ -1828,35 +1828,17 @@
           }
         }
       },
-      "PRN232.LMS.Models/1.0.0": {
+      "PRN232.LMS.Repositories/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "BCrypt.Net-Next": "4.2.0",
           "FluentValidation": "12.1.1",
           "Microsoft.EntityFrameworkCore": "8.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Microsoft.Extensions.Configuration.Json": "8.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0",
-          "Swashbuckle.AspNetCore": "6.6.2"
-        },
-        "compile": {
-          "bin/placeholder/PRN232.LMS.Models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/PRN232.LMS.Models.dll": {}
-        }
-      },
-      "PRN232.LMS.Repositories/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "8.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
-          "Microsoft.Extensions.Configuration": "8.0.0",
-          "Microsoft.Extensions.Configuration.Json": "8.0.0",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0",
-          "PRN232.LMS.Models": "1.0.0",
           "Swashbuckle.AspNetCore": "6.6.2"
         },
         "compile": {
@@ -4994,11 +4976,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "PRN232.LMS.Models/1.0.0": {
-      "type": "project",
-      "path": "../PRN232.LMS.Models/PRN232.LMS.Models.csproj",
-      "msbuildProject": "../PRN232.LMS.Models/PRN232.LMS.Models.csproj"
-    },
     "PRN232.LMS.Repositories/1.0.0": {
       "type": "project",
       "path": "../PRN232.LMS.Repositories/PRN232.LMS.Repositories.csproj",
@@ -5019,7 +4996,6 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.8",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.22.1",
-      "PRN232.LMS.Models >= 1.0.0",
       "PRN232.LMS.Services >= 1.0.0"
     ]
   },
@@ -5055,9 +5031,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\PRN232.LMS.Models.csproj": {
-              "projectPath": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\PRN232.LMS.Models.csproj"
-            },
             "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Services\\PRN232.LMS.Services.csproj": {
               "projectPath": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Services\\PRN232.LMS.Services.csproj"
             }

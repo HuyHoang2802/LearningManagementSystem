@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using PRN232.LMS.API.Helpers;
 using PRN232.LMS.API.RequestModels;
 using PRN232.LMS.API.ResponseModels;
@@ -85,6 +86,7 @@ public class EnrollmentsController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize]
     [ProducesResponseType(typeof(ApiResponse<EnrollmentResponseModel>), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<ApiResponse<EnrollmentResponseModel>>> CreateEnrollment(

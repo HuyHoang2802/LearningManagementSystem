@@ -241,6 +241,10 @@ namespace PRN232.LMS.Models.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("StudentCode")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.HasKey("Studentid");
 
                     b.ToTable("Students");

@@ -21,6 +21,7 @@ namespace PRN232.LMS.API.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetAll([FromQuery] StudentQueryRequest query)
         {

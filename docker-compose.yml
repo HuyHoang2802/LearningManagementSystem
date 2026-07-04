@@ -3,7 +3,10 @@ version: "3.9"
 services:
 
   prn232.lms.api:
-    image: huyhoang282/prn232.lms.api:latest
+    build:
+      context: .
+      dockerfile: LearningManagementSystem/Dockerfile
+    image: prn232.lms.api:latest
 
     container_name: prn232.lms.api
 

@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "D:\\Semester07\\PRN222\\LearningManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.repositories\\data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5BBB96-6C98-47AA-88E4-461BC07C61A7}|PRN232.LMS.Repositories\\PRN232.LMS.Repositories.csproj|solutionrelative:prn232.lms.repositories\\data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\learningmanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|solutionrelative:learningmanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\learningmanagementsystem\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|solutionrelative:learningmanagementsystem\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\learningmanagementsystem\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|solutionrelative:learningmanagementsystem\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\learningmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|solutionrelative:learningmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\learningmanagementsystem\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E1AFE5C7-3485-4765-9CFB-9FF9FA6490BD}|LearningManagementSystem\\PRN232.LMS.API.csproj|solutionrelative:learningmanagementsystem\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77E07347-487B-4738-A151-DBC0E93174DF}|PRN232.LMS.Services\\PRN232.LMS.Services.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.services\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,8 +55,8 @@
       "RelativeMoniker": "D:0:0:{77E07347-487B-4738-A151-DBC0E93174DF}|PRN232.LMS.Services\\PRN232.LMS.Services.csproj|solutionrelative:prn232.lms.services\\iservices\\ienrollmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|d:\\semester07\\prn222\\learningmanagementsystem\\prn232.lms.models\\migrations\\20260530092816_addauthtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EB2CD24-686B-4595-A47B-1C16404248BF}|PRN232.LMS.Models\\PRN232.LMS.Models.csproj|solutionrelative:prn232.lms.models\\migrations\\20260530092816_addauthtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Migrations\\20260530092816_AddAuthTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PRN232.LMS.Models\\Migrations\\20260530092816_AddAuthTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,24 +66,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 611,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GlobalExceptionMiddleware.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Middleware\\GlobalExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "LearningManagementSystem\\Middleware\\GlobalExceptionMiddleware.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Middleware\\GlobalExceptionMiddleware.cs",
+              "RelativeToolTip": "LearningManagementSystem\\Middleware\\GlobalExceptionMiddleware.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T09:26:39.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "LearningManagementSystem\\Program.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Program.cs",
+              "RelativeToolTip": "LearningManagementSystem\\Program.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAQwHwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T09:14:47.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "LearningManagementSystem\\appsettings.json",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\appsettings.json",
+              "RelativeToolTip": "LearningManagementSystem\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-01T09:14:26.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DbSeeder.cs",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\Data\\DbSeeder.cs",
+              "RelativeDocumentMoniker": "PRN232.LMS.Repositories\\Data\\DbSeeder.cs",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Repositories\\Data\\DbSeeder.cs",
+              "RelativeToolTip": "PRN232.LMS.Repositories\\Data\\DbSeeder.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAQwDAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T08:54:52.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Dockerfile",
+              "RelativeDocumentMoniker": "LearningManagementSystem\\Dockerfile",
+              "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Dockerfile",
+              "RelativeToolTip": "LearningManagementSystem\\Dockerfile",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwB8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-17T06:28:05.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "StudentController.cs",
               "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "LearningManagementSystem\\Controllers\\StudentController.cs",
               "ToolTip": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Controllers\\StudentController.cs",
               "RelativeToolTip": "LearningManagementSystem\\Controllers\\StudentController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-30T09:34:12.828Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "20260530092816_AddAuthTable.cs",
               "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Models\\Migrations\\20260530092816_AddAuthTable.cs",
               "RelativeDocumentMoniker": "PRN232.LMS.Models\\Migrations\\20260530092816_AddAuthTable.cs",
@@ -75,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "EnrollmentService.cs",
               "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Services\\Services\\EnrollmentService.cs",
               "RelativeDocumentMoniker": "PRN232.LMS.Services\\Services\\EnrollmentService.cs",
@@ -87,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "CourseService.cs",
               "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Services\\Services\\CourseService.cs",
               "RelativeDocumentMoniker": "PRN232.LMS.Services\\Services\\CourseService.cs",
@@ -99,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "CoursesController.cs",
               "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Controllers\\CoursesController.cs",
               "RelativeDocumentMoniker": "LearningManagementSystem\\Controllers\\CoursesController.cs",
@@ -111,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "IEnrollmentService.cs",
               "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Services\\IServices\\IEnrollmentService.cs",
               "RelativeDocumentMoniker": "PRN232.LMS.Services\\IServices\\IEnrollmentService.cs",
@@ -123,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Class.cs",
               "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Helpers\\Class.cs",
               "RelativeDocumentMoniker": "LearningManagementSystem\\Helpers\\Class.cs",
@@ -135,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "EnrollmentsController.cs",
               "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\LearningManagementSystem\\Controllers\\EnrollmentsController.cs",
               "RelativeDocumentMoniker": "LearningManagementSystem\\Controllers\\EnrollmentsController.cs",
@@ -147,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ICourseService.cs",
               "DocumentMoniker": "D:\\Semester07\\PRN222\\LearningManagementSystem\\PRN232.LMS.Services\\IServices\\ICourseService.cs",
               "RelativeDocumentMoniker": "PRN232.LMS.Services\\IServices\\ICourseService.cs",
