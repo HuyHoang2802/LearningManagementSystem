@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "PRN232.LMS.Course.API.Protos";
+
+package student;
+
+service StudentGrpc {
+  rpc CheckStudentExists (StudentRequest) returns (StudentResponse);
+  rpc GetStudentById (StudentRequest) returns (StudentResponse);
+}
+
+message StudentRequest {
+  int32 student_id = 1;
+}
+
+message StudentResponse {
+  bool exists = 1;
+  string fullname = 2;
+  string email = 3;
+}
