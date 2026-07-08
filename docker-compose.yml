@@ -1,0 +1,69 @@
+version: "3.9"
+
+services:
+
+  prn232.lms.api:
+    build:
+      context: .
+      dockerfile: ./LearningManagementSystem/Dockerfile
+
+    image: prn232.lms.api:latest
+
+    container_name: prn232.lms.api
+
+    restart: unless-stopped
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+
+      ConnectionStrings__DBDefault: >
+        Host=postgres; Port=5432; Database=LMSDB; Username=postgres; Password=12345; Include Error Detail=true
+
+    ports:
+      - "5000:8080"
+
+    volumes:
+      - ./wait-for-it.sh:/wait-for-it.sh:ro
+
+    command: [ "bash", "/wait-for-it.sh", "postgres:5432", "-t", "60", "--", "dotnet", "PRN232.LMS.API.dll" ]
+
+    networks:
+      - backend
+
+  postgres:
+    image: postgres:16
+
+    container_name: postgres-db
+
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: LMSDB
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d LMSDB" ]
+
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+    networks:
+      - backend
+
+volumes:
+  pgdata:
+
+networks:
+  backend:
